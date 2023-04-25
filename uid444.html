@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="ROBOTS" content="NOINDEX, FOLLOW">
+  <title>1cey / Gaysense</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: 'Creepster', cursive;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 100px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 80%;
+      height: auto;
+      margin-top: 50px;
+    }
+    .bio {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1><span style="font-size: 60px; color: red;">🔥</span>1cey<span style="font-size: 60px; color: red;">🔥</span></h1>
+  <div class="bio">
+    <p>UID: 444</p>
+    <p>:3<a href="https://gaysense.lol" target="_blank" style="color: red; text-decoration: underline;">:3:3</a></p>
+  </div>
+  <img src="https://i.imgur.com/DkGrbgK.png" alt="My Cat Photo">
+<audio autoplay loop>
+  <source src="https://gaysense.lol/coolsong.mp3" type="audio/mpeg"></audio>
+  <script>
+    window.addEventListener("load", function() {
+      var zoom = document.getElementsByTagName("h1")[0];
+      var maxZoom = 2.0;
+      var minZoom = 1.0;
+      var currentZoom = 1.0;
+      var zoomIn = true;
+      var audio = new Audio("https://gaysense.lol/coolsong.mp3");
+      audio.loop = true;
+      audio.play();
+
+      function updateZoom() {
+        if (zoomIn) {
+          currentZoom += 0.01;
+        } else {
+          currentZoom -= 0.01;
+        }
+        if (currentZoom > maxZoom) {
+          zoomIn = false;
+        } else if (currentZoom < minZoom) {
+          zoomIn = true;
+        }
+        zoom.style.transform = "scale(" + currentZoom + ")";
+      }
+
+      setInterval(updateZoom, 10);
+    });
+  </script>
+</body>
+</html>
